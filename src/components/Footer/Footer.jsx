@@ -12,7 +12,6 @@ function Footer() {
     <footer className="footer" id="contact">
       <div className="footer-inner">
         <div className="footer-grid">
-          {/* Brand Section */}
           <div className="footer-brand">
             <h2 className="footer-logo">DigiTools</h2>
             <p className="footer-brand-desc">
@@ -21,7 +20,6 @@ function Footer() {
             </p>
           </div>
 
-          {/* Link Columns */}
           {Object.entries(footerLinks).map(([heading, links]) => (
             <div className="footer-col" key={heading}>
               <h4 className="footer-col-title">{heading}</h4>
@@ -37,24 +35,22 @@ function Footer() {
             </div>
           ))}
 
-          {/* Social Links Section */}
           <div className="footer-col">
             <h4 className="footer-col-title">Social Links</h4>
             <div className="footer-socials">
               <a href="#" className="social-link" aria-label="Instagram">
-                <i className="fab fa-instagram" />
+                <i className="fa-brands fa-instagram"></i>
               </a>
               <a href="#" className="social-link" aria-label="Facebook">
-                <i className="fab fa-facebook-f" />
+                <i className="fa-brands fa-facebook-f"></i>
               </a>
               <a href="#" className="social-link" aria-label="X">
-                <i className="fab fa-x-twitter" />
+                <i className="fa-brands fa-x-twitter"></i>
               </a>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="footer-bottom">
           <div className="footer-bottom-left">
             <p className="footer-copy">© 2026 Digitools. All rights reserved.</p>
