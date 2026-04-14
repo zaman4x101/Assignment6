@@ -1,0 +1,157 @@
+.pricing-card {
+  background: var(--bg-card);
+  border-radius: 24px;
+  padding: 40px 30px;
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  min-height: 520px;
+}
+
+/* Featured / Pro Card Style */
+.pricing-card--featured {
+  background: linear-gradient(90deg, #6332ff 0%, #8c1eff 100%);
+  color: #ffffff;
+  border: none;
+  transform: scale(1.05); /* Makes the center card pop */
+  box-shadow: 0 20px 40px rgba(123, 47, 190, 0.25);
+  z-index: 10;
+}
+
+/* Most Popular Badge Styling */
+.pricing-badge {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffeecf; /* Peach-yellow background from image */
+  color: #e67e22; /* Darker orange text from image */
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.pricing-card-header {
+  margin-bottom: 25px;
+}
+
+.pricing-name {
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.pricing-card--featured .pricing-name {
+  color: #fff;
+}
+
+.pricing-subtext {
+  font-size: 14px;
+  color: #f2ebeb;
+}
+
+.pricing-card--featured .pricing-subtext {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Price Display */
+.pricing-price-box {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 30px;
+}
+
+.pricing-currency {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.pricing-amount {
+  font-size: 56px;
+  font-weight: 800;
+  margin: 0 4px;
+}
+
+.pricing-period {
+  font-size: 16px;
+  color: #f2ebeb;
+}
+
+.pricing-card--featured .pricing-period {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Feature List */
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  flex-grow: 1;
+}
+
+.pricing-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #f2ebeb;
+}
+
+.pricing-card--featured .pricing-feature-item {
+  color: #fff;
+}
+
+.feature-check-icon {
+  color: #10b981; /* Green checkmark for standard cards */
+  font-weight: bold;
+}
+
+.pricing-card--featured .feature-check-icon {
+  color: #fff; /* White checkmarks for the purple card */
+}
+
+/* Buttons */
+.pricing-action-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn--standard {
+  background: linear-gradient(90deg, #7b2fbe 0%, #7b2fbe 100%);
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.4s ease;
+}
+
+.btn--standard:hover {
+  background: linear-gradient(90deg, #6332ff 0%, #8c1eff 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btn--featured {
+  background: #fff;
+  color: #7b2fbe;
+}
+
+.btn--featured:hover {
+  background: #f8f8f8;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+  .pricing-card--featured {
+    transform: scale(1); /* Removes scaling on mobile for better stacking */
+  }
+}

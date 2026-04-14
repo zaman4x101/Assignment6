@@ -1,0 +1,108 @@
+.steps-section {
+  background: var(--bg-section);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 80px 80px;
+}
+
+.steps-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Grid */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  position: relative;
+}
+
+/* Step Card */
+.step-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 45px 30px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform var(--transition), border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.step-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(123, 47, 190, 0.18);
+}
+
+/* Number Badge - Fixed to Top Right */
+.step-number-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--purple);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Icon Styling from Design */
+.step-icon-container {
+  margin-bottom: 24px;
+}
+
+.step-icon-bg {
+  width: 90px;
+  height: 90px;
+  background: rgba(151, 71, 255, 0.1); /* Light purple circle */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  /* Optional: Forces icon color to purple if they are black SVGs */
+  filter: invert(31%) sepia(94%) saturate(1315%) hue-rotate(244deg) brightness(88%) contrast(101%);
+}
+
+.step-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.step-desc {
+  font-size: 14px;
+  color: var(--text-gray);
+  line-height: 1.6;
+  max-width: 250px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .steps-section {
+    padding: 64px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-section {
+    padding: 48px 20px;
+  }
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

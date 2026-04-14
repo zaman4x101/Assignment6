@@ -1,0 +1,87 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ── Shared Section Utilities ── */
+.section-tag {
+  display: inline-block;
+  color: var(--purple-light);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.section-desc {
+  color: var(--text-gray);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+/* ── Shared Button Styles ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--purple-btn);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--purple-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-purple);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--purple-light);
+  border: 1.5px solid var(--purple-light);
+  border-radius: var(--radius-md);
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-purple);
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+}
